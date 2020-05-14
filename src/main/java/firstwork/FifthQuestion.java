@@ -1,4 +1,4 @@
-package firstWork;
+package firstwork;
 
 /**
  * @author : zhoumin
@@ -9,6 +9,9 @@ public class FifthQuestion {
    * 使用二维数组和循环实现五子棋游戏棋盘的绘制
    */
   public static void main(String[] args) {
+     FifthQuestion.chackerBoard();
+  }
+  public static void chackerBoard(){
     for (int i = 0; i < 17; i++) {
       if (i == 0) {
         System.out.print(" " + " ");

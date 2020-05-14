@@ -1,4 +1,4 @@
-package firstWork;
+package firstwork;
 
 import java.util.Scanner;
 
