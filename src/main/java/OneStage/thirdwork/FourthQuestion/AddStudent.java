@@ -7,6 +7,5 @@ package OneStage.thirdwork.FourthQuestion;
 public class AddStudent {
   public static void add() {
     System.out.println("增加");
-
   }
 }
