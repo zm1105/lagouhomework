@@ -14,7 +14,7 @@ public class test {
     // 2、创建两个玩家
     PlayerManager playerManager = new PlayerManager();
     playerManager.show();
-    // 4、发牌
+    // 4、 发牌
     //todo 发牌存在问题，需要修改
     mange mange = new mange();
     mange.showPork(poker.createPoker());
