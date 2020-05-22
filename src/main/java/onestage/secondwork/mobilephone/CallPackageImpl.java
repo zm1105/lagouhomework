@@ -1,4 +1,4 @@
-package OneStage.secondwork.mobilephone;
+package onestage.secondwork.mobilephone;
 
 /**
  * @author : zhoumin
@@ -47,6 +47,7 @@ public class CallPackageImpl extends BaseMobilePackage implements CallService {
     this.messageNumber = messageNumber;
   }
 
+  @Override
   public void conversation(int talkTime, Phone phone) {
     phone.phoneCardShow(phone.getCardNumber(), phone.getUserName(), phone.getAccountBalance());
     System.out.println(phone.toString());

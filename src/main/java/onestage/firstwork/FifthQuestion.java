@@ -1,4 +1,4 @@
-package OneStage.firstwork;
+package onestage.firstwork;
 
 /**
  * @author : zhoumin

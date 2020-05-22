@@ -1,4 +1,4 @@
-package OneStage.secondwork.mobilephone;
+package onestage.secondwork.mobilephone;
 
 import org.junit.jupiter.api.Test;
 

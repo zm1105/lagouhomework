@@ -1,4 +1,4 @@
-package OneStage.firstwork;
+package onestage.firstwork;
 
 import java.util.HashSet;
 import java.util.Random;

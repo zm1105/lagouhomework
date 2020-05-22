@@ -1,4 +1,4 @@
-package OneStage.secondwork.Gobang;
+package onestage.secondwork.Gobang;
 
 /**
  * @author : zhoumin

@@ -1,4 +1,4 @@
-package OneStage.secondwork.mobilephone;
+package onestage.secondwork.mobilephone;
 
 /**
  * @author : zhoumin
@@ -38,6 +38,7 @@ public class OnlinePackage extends BaseMobilePackage implements Internet {
     }
   }
 
+  @Override
   public void surfing(int flow, Phone phone) {
     System.out.println(flow);
     System.out.println(phone.toString());
