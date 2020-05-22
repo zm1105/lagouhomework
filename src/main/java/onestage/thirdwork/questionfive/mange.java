@@ -38,7 +38,6 @@ public class mange {
     }
 
     System.out.println("**********发牌成功**********");
-
     return pMap;
 
   }
