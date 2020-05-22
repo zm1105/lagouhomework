@@ -52,5 +52,4 @@ public class player {
         ", pokers=" + pokers +
         '}';
   }
-
 }
