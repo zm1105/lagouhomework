@@ -14,11 +14,18 @@ public class menu {
    */
   private static Scanner sc;
   private static Object Students;
+  public static List<Students> array = new ArrayList<>();
+
 
   public static void choice() {
+    Students students = new Students("1", "李四", 25);
+    Students students3 = new Students("2", "王五", 29);
 
+    array.add(students);
+    array.add(students3);
     sc = new Scanner(System.in);
     int id = 0;
+
 
     try {
       while (true) {
@@ -35,20 +42,20 @@ public class menu {
         //输入数字选择功能
         int input = sc.nextInt();
         //输入的数字在1-6时，能执行功能
-        List<Students> array = new ArrayList<>();
+        //List<Students> array = new ArrayList<>();
         if (input > 0 && input < 6) {
           switch (input) {
             case 2:
-              AddStudent.add((ArrayList<onestage.thirdwork.FourthQuestion.Students>) array);
+              AddStudent.add((ArrayList<onestage.thirdwork.FourthQuestion.Students>) menu.array);
               break;
             case 3:
-              DeleteStudent.delete((ArrayList) array);
+              DeleteStudent.delete((ArrayList<onestage.thirdwork.FourthQuestion.Students>) menu.array);
               break;
             case 4:
-              UpdateStudent.update((ArrayList<onestage.thirdwork.FourthQuestion.Students>) array);
+              UpdateStudent.update((ArrayList<onestage.thirdwork.FourthQuestion.Students>) menu.array);
               break;
             case 1:
-              SelectStudent.select((ArrayList<onestage.thirdwork.FourthQuestion.Students>) array);
+              SelectStudent.select((ArrayList<onestage.thirdwork.FourthQuestion.Students>) menu.array);
               break;
             case 5:
               signOut.out();
