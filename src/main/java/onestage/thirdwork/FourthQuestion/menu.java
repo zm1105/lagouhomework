@@ -36,13 +36,13 @@ public class menu {
         int input = sc.nextInt();
         //输入的数字在1-6时，能执行功能
         List<Students> array = new ArrayList<>();
-        if (input > 0 && input < 7) {
+        if (input > 0 && input < 6) {
           switch (input) {
             case 2:
               AddStudent.add((ArrayList<onestage.thirdwork.FourthQuestion.Students>) array);
               break;
             case 3:
-              DelsteStudent.delete((ArrayList) array);
+              DeleteStudent.delete((ArrayList) array);
               break;
             case 4:
               UpdateStudent.update((ArrayList<onestage.thirdwork.FourthQuestion.Students>) array);

@@ -10,8 +10,13 @@ import java.util.Scanner;
 public class UpdateStudent {
   public static void update(ArrayList<Students> array) {
     Students students = new Students("2", "李四", 25);
+    Students students3 = new Students("7", "王五", 29);
     array.add(students);
-    System.out.println("请输入需要删除的学生信息");
+    array.add(students3);
+    for (Students students1 : array) {
+      System.out.println("所有学生的信息为： "+students1);
+    }
+    System.out.println("请输入需要修改的学生信息学号");
     Scanner scanner = new Scanner(System.in);
     String id = scanner.nextLine();
     int index = -1;

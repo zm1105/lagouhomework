@@ -39,5 +39,8 @@ public class AddStudent {
     s.setAge(age);
     array.add(s);
     System.out.println("添加成功");
+    for (Students students : array) {
+      System.out.println("学生信息为： "+students);
+    }
   }
 }
