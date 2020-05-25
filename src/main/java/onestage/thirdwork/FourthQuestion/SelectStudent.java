@@ -7,7 +7,7 @@ import java.util.ArrayList;
  * @data :  2020/5/21 18:14
  */
 public class SelectStudent {
-  public static void select(ArrayList<Students> array) {
+  public static void selectAll(ArrayList<Students> array) {
     for (Students students2 : array) {
       System.out.println("所有学生的信息为： " + students2);
     }
@@ -19,6 +19,23 @@ public class SelectStudent {
     for (int i = 0; i < array.size(); i++) {
       Students s = array.get(i);
       System.out.println("学号是: " + s.getId() + "  " + "姓名是: " + s.getName() + "   " + "年龄是: " + s.getAge() + "   ");
+    }
+  }
+
+  public static void select(ArrayList<Students> array, String id) {
+    boolean flag = false;
+    int j = -1;
+    for (int i = 0; i < array.size(); i++) {
+      Students students1 = array.get(i);
+      if (students1.getId().equals(id)) {
+        flag = true;
+        j = i;
+      }
+    }
+    if (flag) {
+      System.out.println(array.get(j));
+    }else {
+      System.out.println("该学生不在地球哦-----");
     }
   }
 }

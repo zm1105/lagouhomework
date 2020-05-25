@@ -15,6 +15,7 @@ public class DeleteStudent {
     System.out.println("请输入需要删除的学号");
     Scanner scanner = new Scanner(System.in);
     String id = scanner.nextLine();
+
     Boolean falg= false;
     int j =-1;
     for (int i = 0; i < array.size(); i++) {

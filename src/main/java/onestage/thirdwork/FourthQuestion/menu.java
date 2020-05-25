@@ -17,6 +17,7 @@ public class menu {
   public static List<Students> array = new ArrayList<>();
 
 
+
   public static void choice() {
     Students students = new Students("1", "李四", 25);
     Students students3 = new Students("2", "王五", 29);
@@ -24,7 +25,6 @@ public class menu {
     array.add(students);
     array.add(students3);
     sc = new Scanner(System.in);
-    int id = 0;
 
 
     try {
@@ -36,7 +36,8 @@ public class menu {
         System.out.println("2、增加学生信息");
         System.out.println("3、删除学生信息");
         System.out.println("4、修改学生信息");
-        System.out.println("5、退出系统");
+        System.out.println("5、查询一个学生信息");
+        System.out.println("6、退出系统");
         System.out.println("----------------------------------");
         System.out.print("请输入对应的数字进行操作:");
         //输入数字选择功能
@@ -55,9 +56,16 @@ public class menu {
               UpdateStudent.update((ArrayList<onestage.thirdwork.FourthQuestion.Students>) menu.array);
               break;
             case 1:
-              SelectStudent.select((ArrayList<onestage.thirdwork.FourthQuestion.Students>) menu.array);
+              SelectStudent.selectAll((ArrayList<onestage.thirdwork.FourthQuestion.Students>) menu.array);
               break;
             case 5:
+              SelectStudent.selectAll((ArrayList<onestage.thirdwork.FourthQuestion.Students>) menu.array);
+              System.out.println("输入需要查询的学号");
+              Scanner scanner = new Scanner(System.in);
+              String id = scanner.nextLine();
+              SelectStudent.select((ArrayList<onestage.thirdwork.FourthQuestion.Students>) menu.array,id);
+              break;
+            case 6:
               signOut.out();
               return;
           }
