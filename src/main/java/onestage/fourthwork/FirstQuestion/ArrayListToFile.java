@@ -31,7 +31,6 @@ public class ArrayListToFile {
     if (!file.exists()) {
       file.createNewFile();
     }
-
     try {
       br = new BufferedReader(new FileReader(file));
       // 读取数据存储到集合中
@@ -48,7 +47,6 @@ public class ArrayListToFile {
         //把学生对象添加到集合中
         array.add(s);
       }
-
     } catch (IOException | idException e) {
       e.printStackTrace();
     } finally {
