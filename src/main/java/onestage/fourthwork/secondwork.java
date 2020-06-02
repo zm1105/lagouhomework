@@ -21,6 +21,7 @@ public class secondwork {
     }
   }
 
+
   public static void deleteFile(File file) {
     //判断文件不为null或文件目录存在
     if (file == null || !file.exists()) {
