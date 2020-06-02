@@ -45,6 +45,4 @@ public class secondwork {
     //删除空文件夹  for循环已经把上一层节点的目录清空。
     file.delete();
   }
-
-
 }
