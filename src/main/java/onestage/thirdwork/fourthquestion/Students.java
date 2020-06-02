@@ -1,7 +1,8 @@
-package onestage.thirdwork.FourthQuestion;
+package onestage.thirdwork.fourthquestion;
 
-import java.util.ArrayList;
-import java.util.List;
+import onestage.fourthwork.FirstQuestion.ageException;
+import onestage.fourthwork.FirstQuestion.idException;
+
 import java.util.Objects;
 
 /**
@@ -31,8 +32,12 @@ public class Students {
     return id;
   }
 
-  public void setId(String id) {
-    this.id = id;
+  public void setId(String id) throws idException {
+    if (Integer.valueOf(id) > 0) {
+      this.id = id;
+    }else {
+      throw new idException("学号输入有误");
+    }
   }
 
   public String getName() {
@@ -47,8 +52,13 @@ public class Students {
     return age;
   }
 
-  public void setAge(int age) {
+  public void setAge(int age) throws ageException {
+    if (age>0&&age<180){
     this.age = age;
+
+    }else {
+      throw new ageException("目前地球上没有这个人");
+    }
   }
 
   @Override

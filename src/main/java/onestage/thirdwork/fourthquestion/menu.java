@@ -1,5 +1,10 @@
-package onestage.thirdwork.FourthQuestion;
+package onestage.thirdwork.fourthquestion;
 
+import onestage.fourthwork.FirstQuestion.ArrayListToFile;
+import onestage.fourthwork.FirstQuestion.ageException;
+import onestage.fourthwork.FirstQuestion.idException;
+
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -14,18 +19,14 @@ public class menu {
    */
   private static Scanner sc;
   private static Object Students;
-  public static List<Students> array = new ArrayList<>();
 
 
 
-  public static void choice() {
-    Students students = new Students("1", "李四", 25);
-    Students students3 = new Students("2", "王五", 29);
+  public static void choice() throws ageException, IOException, idException {
 
-    array.add(students);
-    array.add(students3);
     sc = new Scanner(System.in);
-
+    ArrayListToFile alt = new ArrayListToFile();
+    alt.read();
 
     try {
       while (true) {
@@ -44,28 +45,30 @@ public class menu {
         int input = sc.nextInt();
         //输入的数字在1-6时，能执行功能
         //List<Students> array = new ArrayList<>();
-        if (input > 0 && input < 6) {
+        if (input > 0 && input < 7) {
           switch (input) {
             case 2:
-              AddStudent.add((ArrayList<onestage.thirdwork.FourthQuestion.Students>) menu.array);
+              AddStudent.add((ArrayList<onestage.thirdwork.fourthquestion.Students>) ArrayListToFile.array);
               break;
             case 3:
-              DeleteStudent.delete((ArrayList<onestage.thirdwork.FourthQuestion.Students>) menu.array);
+              DeleteStudent.delete((ArrayList<onestage.thirdwork.fourthquestion.Students>) ArrayListToFile.array);
               break;
             case 4:
-              UpdateStudent.update((ArrayList<onestage.thirdwork.FourthQuestion.Students>) menu.array);
+              UpdateStudent.update((ArrayList<onestage.thirdwork.fourthquestion.Students>) ArrayListToFile.array);
               break;
             case 1:
-              SelectStudent.selectAll((ArrayList<onestage.thirdwork.FourthQuestion.Students>) menu.array);
+              SelectStudent.selectAll((ArrayList<onestage.thirdwork.fourthquestion.Students>) ArrayListToFile.array);
               break;
             case 5:
-              SelectStudent.selectAll((ArrayList<onestage.thirdwork.FourthQuestion.Students>) menu.array);
+              SelectStudent.selectAll((ArrayList<onestage.thirdwork.fourthquestion.Students>) ArrayListToFile.array);
               System.out.println("输入需要查询的学号");
               Scanner scanner = new Scanner(System.in);
               String id = scanner.nextLine();
-              SelectStudent.select((ArrayList<onestage.thirdwork.FourthQuestion.Students>) menu.array,id);
+              SelectStudent.select((ArrayList<onestage.thirdwork.fourthquestion.Students>) ArrayListToFile.array, id);
               break;
             case 6:
+
+              alt.write((ArrayList<onestage.thirdwork.fourthquestion.Students>) ArrayListToFile.array);
               signOut.out();
               return;
           }

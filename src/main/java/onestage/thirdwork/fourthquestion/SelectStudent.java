@@ -1,4 +1,4 @@
-package onestage.thirdwork.FourthQuestion;
+package onestage.thirdwork.fourthquestion;
 
 import java.util.ArrayList;
 

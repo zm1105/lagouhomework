@@ -1,4 +1,7 @@
-package onestage.thirdwork.FourthQuestion;
+package onestage.thirdwork.fourthquestion;
+
+import onestage.fourthwork.FirstQuestion.ageException;
+import onestage.fourthwork.FirstQuestion.idException;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -32,9 +35,21 @@ public class UpdateStudent {
       int age = scanner.nextInt();
       //创建学生对象
       Students s = new Students();
-      s.setId(id);
+      try {
+        s.setId(id);
+      } catch (idException e) {
+        e.printStackTrace();
+        System.out.println("修改失败");
+        return;
+      }
       s.setName(name);
-      s.setAge(age);
+      try {
+        s.setAge(age);
+      } catch (ageException e) {
+        e.printStackTrace();
+        System.out.println("修改失败");
+        return;
+      }
 
       //修改集合中的学生对象
       array.set(index, s);

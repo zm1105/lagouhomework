@@ -10,7 +10,6 @@ public class test {
     // 1、创建扑克牌
     poker poker = new poker();
     poker.washPoke(poker.createPoker());
-
     // 2、创建两个玩家
     PlayerManager playerManager = new PlayerManager();
     playerManager.show();
