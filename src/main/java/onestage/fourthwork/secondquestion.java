@@ -6,7 +6,7 @@ import java.io.File;
  * @author : zhoumin
  * @data :  2020/6/2 17:10
  */
-public class secondwork {
+public class secondquestion {
   /**
    * 实现将指定目录中的所有内容删除，包含子目录中的内容都要全部删除。
    */
