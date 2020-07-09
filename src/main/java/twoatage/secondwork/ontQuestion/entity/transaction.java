@@ -7,7 +7,7 @@ import java.io.Serializable;
  * @data :  2020/7/8 16:38
  * 交易记录表
  */
-public class Transaction implements Serializable {
+public class transaction implements Serializable {
   private static final long serialVersionUID = 5994625048926536155L;
 
   private int id;
@@ -18,7 +18,7 @@ public class Transaction implements Serializable {
   private Double tramoney;
   private String tradate;
 
-  public Transaction(int id, String cardid, String tratype, Double tramoney, String tradate) {
+  public transaction(int id, String cardid, String tratype, Double tramoney, String tradate) {
     this.id = id;
     //卡号
     this.cardid = cardid;
@@ -30,7 +30,7 @@ public class Transaction implements Serializable {
     this.tradate = tradate;
   }
 
-  public Transaction() {
+  public transaction() {
   }
 
   public int getId() {
@@ -75,7 +75,7 @@ public class Transaction implements Serializable {
 
   @Override
   public String toString() {
-    return "Transaction{" +
+    return "transaction{" +
         "id=" + id +
         ", cardid='" + cardid + '\'' +
         ", tratype='" + tratype + '\'' +
