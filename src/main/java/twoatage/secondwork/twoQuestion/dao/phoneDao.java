@@ -28,8 +28,8 @@ public class phoneDao {
     }
   }
 
+  //    需求2:  查询所有颜色是白色的手机信息
 public  void selevtcolor(String color) throws SQLException {
-//    需求2:  查询所有颜色是白色的手机信息
   String sql="select * from phone a where a.color = ?";
   phone query = queryRunner.query(sql, new BeanHandler<phone>(phone.class), color);
   System.out.println(query);
