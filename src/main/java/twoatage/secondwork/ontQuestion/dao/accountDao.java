@@ -15,7 +15,6 @@ public class accountDao {
    * 实现卡号：1122334455向55443332211转账5000元的操作；
    */
   private QueryRunner queryRunner = new QueryRunner(DruidUtils.getDataSource());
-  ;
 
   public Double selectBalance(String card) throws SQLException {
     String sql = "select balance from account where card = ?";
@@ -30,9 +29,9 @@ public class accountDao {
     return update;
   }
 
-  public int records(String cardid,String tratype,Double tramoney,String tradate) throws SQLException {
-    String sql ="insert into transaction values(?,?,?,?,?)";
-    Object[] params ={null,cardid,tratype,tramoney,tradate};
+  public int records(String cardid, String tratype, Double tramoney, String tradate) throws SQLException {
+    String sql = "insert into transaction values(?,?,?,?,?)";
+    Object[] params = {null, cardid, tratype, tramoney, tradate};
     int update = queryRunner.update(sql, params);
     return update;
   }
