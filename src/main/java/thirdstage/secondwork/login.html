@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册用户</title>
+</head>
+
+<body>
+
+
+<form action="xxx" onsubmit="return login()">
+
+    <p>用户名 <input id="name" name="username" type="text"></p>
+    <p> 密码 <input name="password" type="password"></p>
+
+    <p>性别<input type="radio" name="sex" checked="checked"> <span>男</span>
+        <input type="radio" name="sex" checked="checked"> <span>女</span></p>
+    <p>学历
+        <input type="radio" name="education" checked="checked"> <span>本科</span>
+        <input type="radio" name="education" checked="checked"> <span>专科</span></p>
+    <p>自我介绍 <input id="introduce" type="text" style="height:100px;width:500px"></p>
+    <p>
+        <button>提交</button>
+    </p>
+</form>
+<script>
+    function login() {
+        var element = document.getElementById("name").value;
+        var value = document.getElementById("introduce").value;
+        if (element != "admin") {
+            alert("输入错误")
+            return false;
+        } else {
+            document.write(value);
+        }
+    }
+</script>
+</body>
+</html>
