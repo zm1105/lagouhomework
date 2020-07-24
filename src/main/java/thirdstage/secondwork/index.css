@@ -1,0 +1,89 @@
+.header{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+.header-left{
+
+}
+.header-right{
+    
+}
+.header-right ul{
+    display: flex;
+    height: 30px;
+    background-color: greenyellow;
+    margin-top: 20px;
+}
+.header-right ul li{
+    display: flex;
+    line-height: 30px;
+    padding: 0 10px 0 10px;
+    background-color: greenyellow;
+}
+.navigation ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    height: 40px;
+    line-height: 40px;
+    margin: 10px 0 10px 0;
+    background-color: orange;
+}
+.banner-box img{
+    width: 100%;
+}
+.book-box{
+    width: 80%;
+    margin: 0 auto;
+    height: 400px;
+    border: 1px solid green;
+    margin-top: 20px;
+    position: relative;
+}
+.book-box-ba_bang{
+    position: absolute;
+    left: -12px;
+    top: 20px;
+}
+.book-box-centent{
+    margin-top: 80px;
+    display: flex;
+}
+.book-box-centent-left{
+    width: 60%;
+    display: flex;
+
+}
+.book-box-centent-left-img{
+    position: relative;
+}
+.book-box-centent-left-info p{
+    padding: 10px 20px 10px 0;
+}
+.book-box-centent-left-img-icom{
+    position: absolute;
+    top: 0;
+    left: 5%;
+}
+.book-box-centent-right{
+    width: 40%;
+}
+.book-box-centent-right-item{
+    display: flex;
+    margin-bottom: 20px;
+}
+.footer{
+    width: 80%;
+    color: #ccc;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    align-items: center;
+    margin-top: 40px;
+}
+a{
+    color: #136ec2;
+}
