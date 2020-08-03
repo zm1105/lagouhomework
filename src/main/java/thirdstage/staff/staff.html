@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>员工管理</title>
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="./drawer.css" />
+</head>
+
+<body>
+    <div>
+        <button class="btn btn-info" id="add_row">新增</button>
+        <button class="btn btn-info">删除</button>
+        <div style="margin-left: 50px;display:inline-block"><input><button class="btn btn-info"> 查询</button></div>
+    </div>
+    <div style="padding: 40px">
+        <table class="table table-bordered table-hover table-condensed" id="orderTable" width="50px">
+            <thead>
+                <tr>
+                    <th><input type="checkbox"> 全选</th>
+                    <th id="num">工号</th>
+                    <th id="username">姓名</th>
+                    <th id="gender">性别</th>
+                    <th id="pwd">密码</th>
+                    <th id="age">年龄</th>
+                    <th id="birth">出生日期</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody class="tableTbody">
+                <!-- 内容部分在./staff.js中进行处理 -->
+            </tbody>
+
+        </table>
+        <div style="text-align: center;" class="showTableLast">暂无数据</div>
+        <!-- 写一个表格粗来,css部分在head部分引入，文件名为drawer,懒得搞太多..就稍微写一下 -->
+        <div id="montLayer">
+            <div id="drawer">
+                <div class="drawer-title">
+                    <div class="formName">默认name</div>
+                    <!-- 操作在js中实现,直接ctrl+f输入class项进行查找 -->
+                    <div class="formOperation">X</div>
+                </div>
+                <!-- form内容 -->
+                <div>
+                    <div class="form-group">
+                        <label for="num">工号</label>
+                        <input type="text" class="form-control" id="num" placeholder="工号">
+                    </div>
+                    <div class="form-group">
+                        <label for="username">姓名</label>
+                        <input type="text" class="form-control" id="username" placeholder="姓名">
+                    </div>
+                    <div class="form-group">
+                        <label for="gender">性别</label>
+                        <input type="text" class="form-control" id="gender" placeholder="性别">
+                    </div>
+                    <div class="form-group">
+                        <label for="pwd">密码</label>
+                        <input type="password" class="form-control" id="pwd" placeholder="密码">
+                    </div>
+                    <div class="form-group">
+                        <label for="age">年龄</label>
+                        <input type="number" class="form-control" id="age" placeholder="年龄">
+                    </div>
+                    <div class="form-group">
+                        <label for="birth">出生日期</label>
+                        <input type="datetime" class="form-control" id="birth" placeholder="出生日期">
+                    </div>
+                    <button type="submit" class="btn btn-default formSubmit">提交</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <!-- 首先对功能模块进行拆分-----首先是头部的新增、删除、查询、其次是表格里的编辑和单独删除按钮 -->
+    <script src="./staff.js"></script>
+</body>
+
+</html>
